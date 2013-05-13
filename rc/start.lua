@@ -66,10 +66,10 @@ xrun("Bluetooth Applet",
      "bluetooth-applet")
 xrun("pidgin", "pidgin -n")
 
-if config.hostname == "neo" then
-   xrun("keepassx", "keepassx -min -lock")
-   xrun("transmission", "transmission-gtk -m")
-elseif config.hostname == "guybrush" then
-   xrun("keepassx", "keepassx -min -lock")
-   xrun("NetworkManager Applet", "nm-applet")
-end
+-- if config.hostname == "neo" then
+--    xrun("keepassx", "keepassx -min -lock")
+--    xrun("transmission", "transmission-gtk -m")
+-- elseif config.hostname == "guybrush" then
+--    xrun("keepassx", "keepassx -min -lock")
+--    xrun("NetworkManager Applet", "nm-applet")
+-- end

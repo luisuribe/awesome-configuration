@@ -88,7 +88,6 @@ cpuicon.image = image(beautiful.icons .. "/widgets/cpu.png")
 
 -- Battery
 local batwidget = { widget = "" }
-if config.hostname == "guybrush" then
    batwidget.widget = widget({ type = "textbox" })
    vicious.register(batwidget.widget, vicious.widgets.bat,
 		    function (widget, args)
@@ -115,7 +114,6 @@ if config.hostname == "guybrush" then
 			     '">%s%d%%</span>', args[1], current)
 		    end,
 		    59, "BAT1")
-end
 local baticon = widget({ type = "imagebox" })
 baticon.image = image(beautiful.icons .. "/widgets/bat.png")
 

@@ -11,69 +11,69 @@ local tagicon = function(icon)
 end
 
 shifty.config.tags = {
-   www = {
-      position = 3,
-      mwfact = 0.7,
-      exclusive = true,
-      max_clients = 1,
-      screen = math.max(screen.count(), 2),
-      spawn = config.browser,
-      icon = tagicon("web")
-   },
-   emacs = {
-      position = 2,
-      mwfact = 0.6,
-      exclusive = true,
-      screen = 1,
-      spawn = "emacs",
-      icon = tagicon("dev"),
-   },
-   xterm = {
-      position = 1,
-      layout = awful.layout.suit.fair,
-      exclusive = true,
-      slave = true,
-      spawn = config.terminal,
-      icon = tagicon("main"),
-   },
-   im = {
-      position = 4,
-      mwfact = 0.2,
-      exclusive = true,
-      screen = math.max(screen.count(), 2),
-      icon = tagicon("im"),
-      nopopup = true,           -- don't give focus on creation
-   }
+   -- www = {
+   --    position = 3,
+   --    mwfact = 0.7,
+   --    exclusive = true,
+   --    max_clients = 1,
+   --    screen = math.max(screen.count(), 2),
+   --    spawn = config.browser,
+   --    icon = tagicon("web")
+   -- },
+   -- emacs = {
+   --    position = 2,
+   --    mwfact = 0.6,
+   --    exclusive = true,
+   --    screen = 1,
+   --    spawn = "emacs",
+   --    icon = tagicon("dev"),
+   -- },
+   -- xterm = {
+   --    position = 1,
+   --    layout = awful.layout.suit.fair,
+   --    exclusive = true,
+   --    slave = true,
+   --    spawn = config.terminal,
+   --    icon = tagicon("main"),
+   -- },
+   -- im = {
+   --    position = 4,
+   --    mwfact = 0.2,
+   --    exclusive = true,
+   --    screen = math.max(screen.count(), 2),
+   --    icon = tagicon("im"),
+   --    nopopup = true,           -- don't give focus on creation
+   -- }
 }
 
 -- Also, see rules.lua
 shifty.config.apps = {
-   {
-      match = { role = { "browser" } },
-      tag = "www",
-   },
-   {
-      match = { "emacs" },
-      tag = "emacs",
-   },
-   {
-      match = { role = { "conversation", "buddy_list" } },
-      tag = "im",
-   },
-   {
-      match = { config.termclass },
-      startup = {
-         tag = "xterm"
-      },
-      intrusive = true,         -- Display even on exclusive tags
-   },
-   {
-      match = { class = { "Keepassx", "Key[-]mon" },
-                role = { "pop[-]up" },
-                name = { "Firebug" },
-                instance = { "plugin[-]container", "exe" } },
-      intrusive = true,
-   },
+   -- {
+   --    match = { role = { "browser" } },
+   --    tag = "www",
+   -- },
+   -- {
+   --    match = { "emacs" },
+   --    tag = "emacs",
+   -- },
+   -- {
+   --    match = { role = { "conversation", "buddy_list" } },
+   --    tag = "im",
+   -- },
+   -- {
+   --    match = { config.termclass },
+   --    startup = {
+   --       tag = "xterm"
+   --    },
+   --    intrusive = true,         -- Display even on exclusive tags
+   -- },
+   -- {
+   --    match = { class = { "Keepassx", "Key[-]mon" },
+   --              role = { "pop[-]up" },
+   --              name = { "Firebug" },
+   --              instance = { "plugin[-]container", "exe" } },
+   --    intrusive = true,
+   -- },
 }
 
 shifty.config.defaults = {
